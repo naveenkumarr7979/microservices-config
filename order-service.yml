@@ -7,7 +7,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/micro-order-services-db
     username: postgres
-    password: ${DB_PASSWORD:jyoti}
+    password: ${DB_PASSWORD}
   jpa:
       hibernate:
         ddl-auto: update
