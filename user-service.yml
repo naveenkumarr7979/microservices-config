@@ -1,14 +1,15 @@
 server:
   port: 5007
-spring:
 
+spring:
   application:
     name: user-service
 
-    datasource:
-      url: jdbc:postgresql://localhost:5432/micro-user-services-db
-      username: postgres
-      password: ${DB_PASSWORD:jyoti}
+  datasource:
+    url: jdbc:postgresql://localhost:5432/micro-user-services-db
+    username: postgres
+    password: ${DB_PASSWORD:jyoti}
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -42,8 +43,10 @@ info:
 logging:
   file:
     name: C:/applications/microservices/logs/user-services.log
+
   pattern:
     file: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n"
+
   level:
     root: INFO
 
