@@ -1,14 +1,16 @@
 server:
   port: 5008
+
 spring:
-   application:
+  application:
     name: product-service
 
-     datasource:
-       url: jdbc:postgresql://localhost:5432/micro-product-services-db
-       username: postgres
-       password: ${DB_PASSWORD:jyoti}
-   jpa:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/micro-product-services-db
+    username: postgres
+    password: ${DB_PASSWORD:jyoti}
+
+  jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
@@ -27,9 +29,11 @@ management:
     web:
       exposure:
         include: "*"
+
   endpoint:
     health:
       show-details: always
+
   info:
     env:
       enabled: true
