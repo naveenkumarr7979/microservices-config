@@ -1,4 +1,11 @@
 spring:
+   application:
+    name: product-service
+
+     datasource:
+       url: jdbc:postgresql://localhost:5432/micro-product-services-db
+       username: postgres
+       password: ${DB_PASSWORD:jyoti}
    jpa:
     hibernate:
       ddl-auto: update
